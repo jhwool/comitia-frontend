@@ -1,19 +1,11 @@
-@import "tailwindcss";
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Light/Dark Theme Variables */
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,8 +15,38 @@
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom Fonts */
+@layer base {
+  :root {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans), sans-serif;
+  }
 }
+
+/* Reusable Input Styles */
+@layer components {
+  .input {
+    @apply w-full px-4 py-2 border rounded text-sm;
+  }
+
+  .label {
+    @apply block mb-1 text-sm font-medium;
+  }
+
+  .error {
+    @apply text-red-500 text-xs mt-1;
+  }
+
+  .button-primary {
+    @apply bg-black text-white py-2 rounded hover:bg-gray-800;
+  }
+}
+
