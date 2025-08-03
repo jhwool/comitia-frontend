@@ -1,6 +1,6 @@
 export default function LandingPage() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-white text-gray-900 dark:bg-gray-950 dark:text-white px-4">
+    <main className="min-h-screen flex flex-col items-center justify-center bg-background text-foreground px-4">
       <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-center">
         Welcome to <span className="text-blue-600">Comitia</span>
       </h1>
@@ -8,15 +8,12 @@ export default function LandingPage() {
         Create, share, and explore AI-powered comics and characters.
       </p>
       <div className="flex flex-col sm:flex-row gap-4">
-        <a
-          href="/auth/signin"
-          className="px-6 py-3 rounded-md bg-blue-600 text-white hover:bg-blue-700 transition"
-        >
+        <a href="/auth/sign-in" className="button-primary text-center">
           Sign In
         </a>
         <a
-          href="/auth/signup"
-          className="px-6 py-3 rounded-md border border-blue-600 text-blue-600 hover:bg-blue-50 transition"
+          href="/auth/sign-up"
+          className="border border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950 transition px-6 py-2 rounded text-center"
         >
           Sign Up
         </a>
@@ -24,4 +21,5 @@ export default function LandingPage() {
     </main>
   );
 }
+
 
