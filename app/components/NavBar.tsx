@@ -1,4 +1,3 @@
-// app/components/NavBar.tsx
 import Link from "next/link";
 
 export default function NavBar() {
@@ -8,6 +7,7 @@ export default function NavBar() {
       <Link href="/auth/sign-in" className="hover:underline">Sign In</Link>
       <Link href="/auth/sign-up" className="hover:underline">Sign Up</Link>
       <Link href="/create" className="hover:underline">Create</Link>
+      <Link href="/settings" className="hover:underline">Settings</Link> {/* ← 추가 */}
     </nav>
   );
 }
